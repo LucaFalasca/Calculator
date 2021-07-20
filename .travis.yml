@@ -1,0 +1,10 @@
+language: java
+jdk:
+    -openjdk16
+addons:
+  sonarcloud:
+    organization: "lucafalasca"
+    token: "edf17236a4c07be4a7e44584329b4931ab165322" # encrypted value of your token
+script: 
+    - ant build
+    - sonar-scanner
